@@ -1,0 +1,13 @@
+--- debian/rules	2014-09-15 20:00:50.604074030 +0000
++++ ../php5-gearman-orig/debian/rules	2014-09-15 19:55:19.976043457 +0000
+@@ -95,8 +95,8 @@
+ 	mkdir -p debian/$(BIN_PACKAGE_NAME)/$(EXT_DIR)
+ 	install -m 644 -o root -g root tmp/modules$*/$(PECL_PKG_NAME).so debian/$(BIN_PACKAGE_NAME)/$(EXT_DIR)/$(PECL_PKG_NAME).so
+ 	if [ -f "debian/$(PECL_PKG_NAME).ini" ]; then \
+-		mkdir -p debian/$(BIN_PACKAGE_NAME)/etc/php$*/conf.d; \
+-		cp debian/$(PECL_PKG_NAME).ini debian/$(BIN_PACKAGE_NAME)/etc/php$*/conf.d; \
++		mkdir -p debian/$(BIN_PACKAGE_NAME)/usr/share/php$*/$(PECL_PKG_NAME); \
++		cp debian/$(PECL_PKG_NAME).ini debian/$(BIN_PACKAGE_NAME)/usr/share/php$*/$(PECL_PKG_NAME); \
+ 	fi
+ 
+ # Build architecture-independent files here.

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+#EXTRA#
+#DEBHELPER#
+
+if [ "$1" = "remove" ]; then
+    php5dismod @dsoname@
+fi
+
+exit 0
